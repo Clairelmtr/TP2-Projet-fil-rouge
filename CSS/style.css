@@ -1,0 +1,153 @@
+/* Importation des polices depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,300&display=swap');
+
+/* Modification pour le titre */
+header {
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    display: flex;
+    border-bottom: 1px solid #808080;
+    font-size : 10px;
+}
+
+/* Largeur du titre principal */
+.header {
+    width: 40%;
+}
+
+/* Réinitialisation des marges et des paddings pour tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header nav {
+    text-align: right;
+    width: 100%;
+}
+
+.icone {
+    padding-right: 0.5%;
+}
+
+#vert {
+    color: #1bd79e;
+}
+
+/* Espacement en haut du main */
+main {
+    padding-top: 0.5em;
+}
+
+main h2{
+    color: white;
+    font-family: "Yeseva One";
+    font-size: 3em;
+    padding-left: 8%;
+    margin: 0.60em;
+}
+
+main p {
+    color: #808080;
+    font-weight: lighter;
+    margin: 2em;
+    padding-left: 8%;
+    font-family: "Montserrat";
+}
+
+
+.center{
+    display: flex;
+    color: white;
+    gap: 50px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+
+.Portrait {
+    background-color: #1bd79e;
+    padding: px;
+}
+
+main nav button {
+    background-color: var(--backgroundDark);
+    color: var(--texte);
+    border: none;
+    letter-spacing: 0.25em;
+    font-weight: lighter;
+    padding: 0.5em;
+}
+
+/* Grille pour les images */
+.picture {
+   /* Utilise CSS Grid pour la mise en page */
+    display: grid;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.picture img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+body {
+    background-color: #041821;
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 4em;
+    font-weight: 100;
+    opacity: 0.5;
+}
+
+/* Format téléphone*/
+/* Media queries pour les appareils avec une largeur minimale de 768px */
+@media screen and (min-width: 768px) {
+
+    header {
+      display: inherit;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em;
+    }
+  
+    main {
+      width: 80%;
+      margin: auto;
+    }
+  
+    main h2 {
+      font-size: 3em;
+    }
+  
+    main nav {
+      justify-content: center;
+      gap: 1em;
+    }
+  
+    main nav button {
+      font-size: 0.75em;
+    }
+  
+    .picture {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  
+    main p {
+      width: 80%;
+    }
+}
